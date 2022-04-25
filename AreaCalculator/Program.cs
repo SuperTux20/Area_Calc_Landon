@@ -2,19 +2,19 @@
 
 class Program
 {
-    static double[] sizeGetter(string type)
+    static double[] sizeGetter()
     {
         double rw;
         double rh;
         bool invalid = true;
         do
         {
-            Console.Write($"Please enter the width of the {type}. ");
+            Console.Write($"Please enter the width. ");
             invalid = !double.TryParse(Console.ReadLine(), out rw);
         } while (invalid);
         do
         {
-            Console.Write($"Please enter the length of the {type}. ");
+            Console.Write($"Please enter the length. ");
             invalid = !double.TryParse(Console.ReadLine(), out rh);
         } while (invalid);
         return new double[] { rw, rh };
@@ -33,19 +33,17 @@ class Program
             {
                 case "square":
                     double s;
-                    Console.WriteLine("Please enter the length of the sides of the square. ");
+                    Console.WriteLine("Please enter the length. ");
                     string? s2 = Console.ReadLine();
                     if (double.TryParse(s2, out s)) Console.WriteLine(Shaper.getSquareArea(s));
                     else Console.WriteLine(Shaper.getSquareArea(s2));
                     break;
                 case "rectangle":
-                    Console.WriteLine(Shaper.getRectangleArea(sizeGetter("rectangle")));
+                case "parallelogram":
+                    Console.WriteLine(Shaper.getRectangleArea(sizeGetter()));
                     break;
                 case "triangle":
-                    Console.WriteLine(Shaper.getRectangleArea(sizeGetter("triangle")) / 2);
-                    break;
-                case "parallelogram":
-                    Console.WriteLine(Shaper.getRectangleArea(sizeGetter("parallelogram")));
+                    Console.WriteLine(Shaper.getRectangleArea(sizeGetter()) / 2);
                     break;
                 case "radius":
                     double d;
