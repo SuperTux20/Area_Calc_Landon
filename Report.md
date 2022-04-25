@@ -1,0 +1,4 @@
+The most complex thing found was the string input overload for `getSquareArea`, at a Cyclomatic Complexity of 13. Second-most was `Main` with a complexity of 10, but I suppose that's to be expected.
+As far as coverage goes, I think I fixed whatever bugs may occur. I'm sure you have specific methods for testing edge cases that I don't have, though.
+I didn't find many issues, I guess it was just a matter of not procrastinating on it, LOL
+I probably could've done this all in a day or two if I put my mind to it, but I dragged it out across the week instead. I also had my Capstone project, so that was another thing to distract me.
